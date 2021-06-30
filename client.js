@@ -7,7 +7,10 @@ const connect = function () {
   });
   
   conn.on("connect", () => {
-    console.log('Welcome, Jake Appleby3!')
+    console.log('Successfully connected to game server')
+  });
+  conn.on('connect', () => {
+    conn.write('Name: JAK');
   });
   conn.on("data", (data) => {
     console.log(`Server says: `, data)
