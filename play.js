@@ -1,8 +1,7 @@
-const client = require('./client');
-const setupInput = require('./input');
+const {connect} = require('./client');
+const {setupInput} = require('./input');
 
-client.connect();
+const connection = connect();
+setupInput(connection);
 
-
-setupInput();
-
+module.exports = { connect };
